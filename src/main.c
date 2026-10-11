@@ -71,14 +71,14 @@ void app_main(void)
 
         printf("--- RESULTS ---\n");
 
-        // Resta de matrices (A - B)
-        Res[0][0] = A[0][0] - B[0][0];
-        Res[0][1] = A[0][1] - B[0][1];
-        Res[1][0] = A[1][0] - B[1][0];
-        Res[1][1] = A[1][1] - B[1][1];
+        // Multiplicacion de matrices (A x B)
+        Res[0][0] = A[0][0] * B[0][0] + A[0][1] * B[1][0];
+        Res[0][1] = A[0][0] * B[0][1] + A[0][1] * B[1][1];
+        Res[1][0] = A[1][0] * B[0][0] + A[1][1] * B[1][0];
+        Res[1][1] = A[1][0] * B[0][1] + A[1][1] * B[1][1];
 
-        print_matrix("Subtraction (A - B)", Res);
-    
+        print_matrix("Multiplication (A x B)", Res);
+
         printf("====================================\n\n");
     }
 }
